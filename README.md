@@ -2,24 +2,28 @@
 
 ## Run kafka cluster
 
-`$ docker-compose -d up`
+`$ bash docker-compose -d up`
 
 ## Create topic: myTopic
 
-`$ createTopic.sh`
+`$ bash createTopic.sh`
 
 ## Verify that topic was created
 
-`$ listTopics.sh`
+`$ bash listTopics.sh`
 
 ## Start consumer
 
-`$ consumer.sh`
+`$ bash consumer.sh`
+
+## Start kotlin consumer
+
+`$ bash kotlinConsumer.sh`
 
 ## Start producer
 
-`$ producer.sh`
+`$ bash producer.sh`
 
 ## Producer some messages
 
-In producer shell, type a message and hit enter. That message should then be available in the consumer shell.
+In producer shell, type a message and hit enter. That message should then be available in the consumers.

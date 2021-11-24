@@ -2,7 +2,7 @@
 
 ## Run kafka cluster
 
-`$ bash docker-compose -d up`
+`$ bash docker-compose up -d`
 
 ## Create topic: myTopic
 

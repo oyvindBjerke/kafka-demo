@@ -2,7 +2,7 @@
 
 ## Run kafka cluster
 
-`$ bash docker-compose -d up`
+`$ docker-compose up -d`
 
 ## Create topic: myTopic
 
@@ -24,6 +24,6 @@
 
 `$ bash producer.sh`
 
-## Producer some messages
+## Produce some messages
 
 In producer shell, type a message and hit enter. That message should then be available in the consumers.

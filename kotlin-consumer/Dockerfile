@@ -1,14 +1,14 @@
-FROM maven:3.6.3-jdk-11-slim AS build
+FROM maven:3.8.4-openjdk-17-slim AS build
 
 WORKDIR /usr/src/app
 
 COPY pom.xml pom.xml
-RUN mvn dependency:go-offline
+RUN mvn -B package -Dmaven.test.skip
 
 COPY src src
-RUN mvn package
+RUN mvn -o -B package
 
-FROM openjdk:11.0.6-jre-slim-buster
+FROM openjdk:17.0.1-jdk-slim-bullseye
 
 WORKDIR /usr/app
 
